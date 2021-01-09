@@ -1,0 +1,3 @@
+rootProject.name = 'sysparticle'
+include 'sysparticle-api','syspartile-core'
+
