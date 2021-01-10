@@ -1,0 +1,5 @@
+name: SysParticle
+version: @version@
+main: jp.abyss.sysparticle.SysParticle
+authors: [AbyssMembers]
+

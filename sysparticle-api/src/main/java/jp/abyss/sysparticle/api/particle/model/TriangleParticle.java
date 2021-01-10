@@ -2,10 +2,10 @@ package jp.abyss.sysparticle.api.particle.model;
 
 import jp.abyss.sysparticle.api.particle.IntervalHolder;
 
-public interface CircleParticle extends IntervalHolder, PointParticleModel {
+public interface TriangleParticle extends HierarchicalModel, IntervalHolder {
 
     double getRadius();
 
-    CircleParticle setRadius(double radius);
+    TriangleParticle setRadius(double radius);
 
 }

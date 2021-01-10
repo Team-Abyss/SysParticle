@@ -8,5 +8,4 @@ public interface RelativeCenterLocationHolder {
 
     void setRelativeCenterLocation(RelativeLocation relativeLocation);
 
-
 }

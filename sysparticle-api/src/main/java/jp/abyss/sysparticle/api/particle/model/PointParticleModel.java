@@ -1,25 +1,24 @@
 package jp.abyss.sysparticle.api.particle.model;
 
 import jp.abyss.sysparticle.api.particle.PointParticle;
+import jp.abyss.sysparticle.api.particle.RelativeCenterLocationHolder;
 
 import java.util.List;
 
-public interface PointParticleModel {
+public interface PointParticleModel extends RelativeCenterLocationHolder, Cloneable {
 
     List<PointParticle> getPointParticles();
 
     double getRoll();
 
-    void setRoll(double roll);
+    PointParticleModel setRoll(double roll);
 
     double getPitch();
 
-    void setPitch(double pitch);
+    PointParticleModel setPitch(double pitch);
 
     double getYaw();
 
-    void setYaw(double yaw);
-
-
+    PointParticleModel setYaw(double yaw);
 
 }

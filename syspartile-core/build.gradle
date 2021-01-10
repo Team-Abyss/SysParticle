@@ -1,3 +1,20 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
 dependencies {
-    api project(':sysparticle-api')
+    compile project(':sysparticle-api')
 }
+
+processResources {
+    from(sourceSets.main.resources.srcDirs) {
+        filter ReplaceTokens, tokens: [version: version]
+    }
+}
+
+jar {
+    dependsOn project(':sysparticle-api').jar
+    archiveName = "sysparticle-${version}.jar"
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
